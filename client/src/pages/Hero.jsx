@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="flex w-full py-2 px-2">
             <img src={image1} alt="Image 1" className="w-full rounded-lg h-auto max-h-[50vh]" />
         </div>
-        <div className='flex flex-col gap-1 mt-1 px-2'>
+        <div className='flex flex-col  mt-2 px-2'>
             <div className='flex justify-between items-center'>
                 <h1 className='text-3xl font-bold '>Laidbydiba</h1>
                 <Link to="/slots" className='bg-Complemetary text-white px-4 py-1 rounded-sm'>Book</Link>

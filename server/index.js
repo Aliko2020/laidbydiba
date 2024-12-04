@@ -43,8 +43,6 @@ async function seedDB() {
   console.log('Database seeded with slots');
 }
 
-seedDB()
-
 // Schedule the seed function to run every week (Sunday at midnight)
 cron.schedule('0 0 * * 0', () => {
   console.log('Running seed task...');

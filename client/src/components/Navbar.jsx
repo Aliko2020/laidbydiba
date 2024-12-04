@@ -18,7 +18,7 @@ const Navbar = () => {
         </div>
         <div className={`sm:flex sm:items-center sm:w-auto bg-Complemetary text-Primary ${isOpen ? 'fixed' : 'hidden'} left-0 top-0 w-1/2 h-full sm:static sm:w-auto`}>
           <ul className="sm:flex sm:justify-between p-4 sm:p-0">
-            <div className="sm:hidden ml-2 text-lg mt-2 font-Pacifico">Laidbydiba</div>
+            <div className="sm:hidden ml-2 text-lg mt-2 underline">Laidbydiba</div>
             <li className="font-semibold p-2">
               <a href="#">Home</a>
             </li>

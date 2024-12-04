@@ -1,55 +1,81 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
 
 const UserForm = ({ onSubmit }) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (name && email && phone) {
-      onSubmit({ name, email, phone });
-      navigate('/payment'); // Corrected to use 'navigate' instead of 'history.push'
-    } else {
-      alert('Please fill in all fields.');
-    }
-  };
+  const validationSchema = Yup.object({
+    name: Yup.string()
+      .min(3, 'Name must be at least 3 characters')
+      .required('Name is required'),
+    email: Yup.string()
+      .email('Invalid email address')
+      .required('Email is required'),
+    phone: Yup.string()
+      .required('Phone number is required'),
+  });
 
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">Enter Your Information</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label className="block mb-2 text-sm font-medium text-gray-700">Name</label>
-          <input
-            type="text"
-            className="border rounded w-full py-2 px-3 text-gray-700"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block mb-2 text-sm font-medium text-gray-700">Email</label>
-          <input
-            type="email"
-            className="border rounded w-full py-2 px-3 text-gray-700"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block mb-2 text-sm font-medium text-gray-700">Phone</label>
-          <input
-            type="text"
-            className="border rounded w-full py-2 px-3 text-gray-700"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          />
-        </div>
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">Proceed to Payment</button>
-      </form>
+    <div className="p-6 h-[100vh]">
+      <h2 className="text-2xl font-bold mb-1">Enter Contact Information</h2>
+      <p className='mb-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex consequatur exercitationem modi veniam nostrum</p>
+      <Formik
+        initialValues={{ name: '', email: '', phone: '' }}
+        validationSchema={validationSchema}
+        onSubmit={(values) => {
+          onSubmit(values);
+          navigate('/payment');
+        }}
+      >
+        {({ isSubmitting }) => (
+          <Form>
+            <div className="mb-4">
+              <label className="block mb-2 font-medium text-gray-700">Name*</label>
+              <Field
+                type="text"
+                name="name"
+                className="border border-Complemetary rounded w-full py-2 px-3 text-gray-700 focus:outline-none"
+              />
+              <ErrorMessage name="name" component="div" className="text-red-500 text-sm" />
+            </div>
+            <div className="mb-4">
+              <label className="block mb-2 font-medium text-gray-700">Email (optional)</label>
+              <Field
+                type="email"
+                name="email"
+                className="border border-Complemetary rounded w-full py-2 px-3 text-gray-700 focus:outline-none"
+              />
+              <ErrorMessage name="email" component="div" className="text-red-500 text-sm" />
+            </div>
+            <div className="mb-4">
+              <label className="block mb-2 font-medium text-gray-700">Phone*</label>
+              <div className='flex gap-2 items-center'>
+                <label className='border border-Complemetary p-2 rounded' htmlFor="">+233</label>
+                <Field
+                type="text"
+                name="phone"
+                className="border border-Complemetary rounded w-full py-2 px-3 text-gray-700 focus:outline-none"
+              />
+              </div>
+              <ErrorMessage name="phone" component="div" className="text-red-500 text-sm" />
+            </div>
+            <div className='flex justify-between mt-8'>
+            <button type="submit" className="bg-Complemetary text-Primary px-4  rounded" disabled={isSubmitting}>
+              Proceed to Payment
+            </button>
+            <button 
+              onClick={() => navigate(-1)} 
+              className="bg-Complemetary text-Primary px-4 py-2 rounded"
+            >
+              Back
+            </button>
+            </div>
+          </Form>
+        )}
+      </Formik>
+      
     </div>
   );
 };
