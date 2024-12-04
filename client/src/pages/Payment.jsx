@@ -9,7 +9,7 @@ const Payment = ({ userInfo, slotInfo }) => {
 
   const handlePayment = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/confirm-booking', {
+      const response = await axios.post('https://laidbydiba.onrender.com/confirm-booking', {
         userInfo,
         slotInfo
       });

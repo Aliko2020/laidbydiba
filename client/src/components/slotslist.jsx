@@ -13,7 +13,7 @@ const SlotList = ({ onBook }) => {
 
   const fetchSlots = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/slots');
+      const response = await axios.get('https://laidbydiba.onrender.com/slots');
       setSlots(response.data);
     } catch (error) {
       console.error('Error fetching slots:', error);
