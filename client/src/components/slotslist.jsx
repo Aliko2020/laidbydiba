@@ -29,19 +29,33 @@ const SlotList = ({ onBook }) => {
     navigate('/user-info');
   };
 
-  const getBackgroundColor = (date) => {
-    const day = new Date(date).toLocaleDateString('en-US', { weekday: 'long' });
+  const getBackgroundColor = (day) => {
     const colors = {
       Monday: 'bg-red-100',
-      Tuesday: 'bg-Primary',
+      Tuesday: 'bg-blue-100',
       Wednesday: 'bg-red-100',
-      Thursday: 'bg-Primary',
+      Thursday: 'bg-blue-100',
       Friday: 'bg-red-100',
-      Saturday: 'bg-Primary',
+      Saturday: 'bg-blue-100',
       Sunday: 'bg-red-100'
     };
-    return colors[day] || 'bg-Primary';
+    return colors[day] || 'bg-primary';
   };
+
+  // Get today's date and the name of the current day
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const currentDayName = today.toLocaleDateString('en-US', { weekday: 'long' });
+
+  // Days of the week in order
+  const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+  // Filter slots to show only those from today onwards
+  const filteredSlots = slots.filter(slot => {
+    const slotDayIndex = daysOfWeek.indexOf(slot.date);
+    const todayIndex = daysOfWeek.indexOf(currentDayName);
+    return slotDayIndex >= todayIndex;
+  });
 
   return (
     <div className="p-6">
@@ -59,10 +73,9 @@ const SlotList = ({ onBook }) => {
           <option value="Hair colouring">Hair colouring</option>
           <option value="Wig styling for Occasion & shoots">Wig styling for Occasion & shoots</option>
         </select>
-
       </div>
       <div className="grid grid-cols-1 gap-4">
-        {slots.map(slot => (
+        {filteredSlots.map(slot => (
           <div 
             key={`${slot.date}-${slot.slot}`} 
             className={`p-4 border rounded-md ${getBackgroundColor(slot.date)}`}
@@ -81,12 +94,12 @@ const SlotList = ({ onBook }) => {
         ))}
       </div>
       <div className='flex justify-end w-full'>
-      <button 
-        onClick={() => navigate(-1)} 
-        className="bg-Complemetary mt-4 text-white px-4 py-2 rounded shadow-lg"
-      >
-        Back
-      </button>
+        <button 
+          onClick={() => navigate(-1)} 
+          className="bg-Complemetary mt-4 text-white px-4 py-2 rounded shadow-lg"
+        >
+          Back
+        </button>
       </div>
     </div>
   );

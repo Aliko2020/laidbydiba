@@ -2,9 +2,9 @@ import React from 'react';
 
 const Services = () => {
   return (
-    <div className='flex flex-col gap-2 mt-4 w-full p-2'>
-        <h1 className='text-lg font-bold sm:mb-4'>Services</h1>
-        <div className='w-full flex flex-wrap gap-4'>
+    <div className='flex flex-col gap-2 mt-4 w-full p-4'>
+        <h1 className='text-lg text-gray-800 font-bold sm:mb-4'>Services</h1>
+        <div className='w-full flex flex-wrap gap-4 text-gray-700'>
                
                     <div className='flex flex-col gap-1 border p-2 w-full lg:max-w-md rounded-md'>
                         <h3 className='font-semibold '>Glue-less wigs (frontal & closure)</h3>
