@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const SlotList = ({ onBook }) => {
   const [slots, setSlots] = useState([]);
   const [selectedService, setSelectedService] = useState('');
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,6 +18,8 @@ const SlotList = ({ onBook }) => {
       setSlots(response.data);
     } catch (error) {
       console.error('Error fetching slots:', error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -74,25 +77,31 @@ const SlotList = ({ onBook }) => {
           <option value="Wig styling for Occasion & shoots">Wig styling for Occasion & shoots</option>
         </select>
       </div>
-      <div className="grid grid-cols-1 gap-4">
-        {filteredSlots.map(slot => (
-          <div 
-            key={`${slot.date}-${slot.slot}`} 
-            className={`p-4 border rounded-md ${getBackgroundColor(slot.date)}`}
-          >
-            <p>Date: {slot.date}</p>
-            <p>Slot: {slot.slot} ({slot.time})</p>
-            {slot.service && <p>Service: {slot.service}</p>}
-            <button 
-              className={`mt-2 px-4 py-2 rounded-md ${slot.booked ? 'bg-red-500 text-white' : 'bg-Complemetary text-Primary'}`} 
-              onClick={() => bookSlot(slot.date, slot.slot)} 
-              disabled={slot.booked}
+      {loading ? (
+        <div className="flex justify-center items-center h-64">
+          <div className="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12"></div>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 gap-4">
+          {filteredSlots.map(slot => (
+            <div 
+              key={`${slot.date}-${slot.slot}`} 
+              className={`p-4 border rounded-md ${getBackgroundColor(slot.date)}`}
             >
-              {slot.booked ? 'Booked' : 'Book Slot'}
-            </button>
-          </div>
-        ))}
-      </div>
+              <p>Date: {slot.date}</p>
+              <p>Slot: {slot.slot} ({slot.time})</p>
+              {slot.service && <p>Service: {slot.service}</p>}
+              <button 
+                className={`mt-2 px-4 py-2 rounded-md ${slot.booked ? 'bg-red-500 text-white' : 'bg-Complemetary text-Primary'}`} 
+                onClick={() => bookSlot(slot.date, slot.slot)} 
+                disabled={slot.booked}
+              >
+                {slot.booked ? 'Booked' : 'Book Slot'}
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
       <div className='flex justify-end w-full'>
         <button 
           onClick={() => navigate(-1)} 
