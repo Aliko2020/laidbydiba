@@ -19,7 +19,7 @@ const SlotList = ({ onBook }) => {
     } catch (error) {
       console.error('Error fetching slots:', error);
     } finally {
-      setLoading(false);
+      setLoading(true);
     }
   };
 
@@ -79,7 +79,7 @@ const SlotList = ({ onBook }) => {
       </div>
       {loading ? (
         <div className="flex justify-center items-center h-64">
-          <div className="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12"></div>
+          <p>Loading available slots.This might take a couple seconds...</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-4">

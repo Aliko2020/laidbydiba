@@ -10,9 +10,9 @@ const Layout = () => {
       <main className="flex-grow">
         <Outlet />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
 
-export default Layout;
+export default Layout

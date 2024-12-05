@@ -11,8 +11,10 @@ module.exports = {
     },
     colors: {
       "Primary": "#f3bdc6",
+      "Links": "#6950F3",
       "Complemetary": "#211b1a",
       "Soft": "#DBC1AD"
+      
     }
     },
   },

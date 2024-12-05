@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className="shadow-lg w-full p-4">
       <div className="flex items-center justify-between">
         <div className="text-lg font-Pacifico text-white">Laidbydiba</div>
-        <div className="sm:hidden text-lg">
+        <div className="sm:hidden text-2xl">
           <button onClick={toggleMenu} className="focus:outline-none">
             &#9776;
           </button>
@@ -39,3 +39,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
