@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import image1 from '../assets/image1.png';
+import image1 from '../assets/image1.jpg';
 
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     const checkOpenStatus = () => {
@@ -28,7 +29,15 @@ const Hero = () => {
   return (
     <div className='flex flex-col w-full'>
       <div className="flex w-full py-2 px-2">
-        <img src={image1} alt="Image 1" className="w-full rounded-lg h-auto max-h-[50vh]" />
+        {!imageLoaded && (
+          <div className="w-full h-[40vh] max-h-[50vh] bg-gray-500 animate-pulse rounded-lg"></div>
+        )}
+        <img 
+          src={image1} 
+          alt="Image 1" 
+          className={`w-full rounded-lg h-auto max-h-[50vh] ${imageLoaded ? '' : 'hidden'}`} 
+          onLoad={() => setImageLoaded(true)} 
+        />
       </div>
       <div className='flex flex-col mt-2 px-4'>
         <div className='flex justify-between items-center'>
@@ -37,7 +46,7 @@ const Hero = () => {
         </div>
         <div className='flex justify-between gap-2 mt-2'>
           <div className='flex gap-2'>
-            <span className={`text-${isOpen ? 'Links' : 'bg-red-400'}`}>Shop:{isOpen ? 'Opened' : 'Closed'}</span>
+            <span className={`text-${isOpen ? 'Links' : 'bg-red-400'}`}>{isOpen ? 'Opened' : 'Closed'}</span>
             <span className='text-gray-400'>Bolgatanga main street</span>
           </div>
           <Link className='text-Links'>Get Directions</Link>

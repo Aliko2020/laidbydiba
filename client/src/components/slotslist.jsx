@@ -19,7 +19,7 @@ const SlotList = ({ onBook }) => {
     } catch (error) {
       console.error('Error fetching slots:', error);
     } finally {
-      setLoading(true);
+      setLoading(false);
     }
   };
 

@@ -25,7 +25,7 @@ const Reviews = () => {
               <span className='text-2xl text-gray-400'>A</span>
             </div>
             <div className='flex flex-col gap-1 justify-center'>
-              <p className='text-gray-600 text-[18px] font-semibold'>Aliko A.</p>
+              <p className='text-gray-600 text-[18px] font-semibold'>Amanda A.</p>
               <p className='text-sm text-gray-400'>Tue,12 Sep 2024 at 11:31pm</p>
             </div>
           </div>
