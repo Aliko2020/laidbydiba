@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
@@ -8,7 +8,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="flex justify-center items-center shadow-lg w-full p-4 bg-white">
+    <nav className="flex justify-center items-center shadow-lg font-semibold w-full p-4 bg-white sticky top-0 z-50">
       <ul className="flex gap-4">
         <li className={`pb-2 ${getNavLinkClass('/')}`}>
           <Link to="/">Home</Link>
@@ -16,8 +16,8 @@ const Navbar = () => {
         <li className={`pb-2 ${getNavLinkClass('/services')}`}>
           <Link to="/services">Services</Link>
         </li>
-        <li className={`pb-2 ${getNavLinkClass('/book')}`}>
-          <Link to="/book">Book</Link>
+        <li className={`pb-2 ${getNavLinkClass('/slots')}`}>
+          <Link to="/slots">Book</Link>
         </li>
       </ul>
     </nav>

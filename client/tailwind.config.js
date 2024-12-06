@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       fontFamily: {
         "Pacifico": ["Pacifico", 'cursive'],
-        "Roboto": ["Roboto", 'sans-serif']
+        "Roboto": ["Roboto", 'sans-serif'],
+        "test": ["Delius", "cursive"]
     },
     colors: {
       "Primary": "#f3bdc6",

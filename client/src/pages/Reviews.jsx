@@ -16,7 +16,7 @@ const Reviews = () => {
         
             <h1 className='text-lg font-bold'>Reviews</h1>
             <div className='w-16 p-0.5 bg-[#eea239] mb-4'></div>
-        
+          <p className='mb-4'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti alias unde amet porro in aperiam qui dicta saepe dolorem similique voluptates eos rem magni, placeat repudiandae ex corporis cum repellendus.</p>
         <div className='flex flex-col md:flex-row gap-4 '>
       <div className='flex flex-col text-[17px] max-w-lg'>
         <div className='flex flex-col gap-2'>
@@ -25,7 +25,7 @@ const Reviews = () => {
               <span className='text-2xl text-gray-400'>A</span>
             </div>
             <div className='flex flex-col gap-1 justify-center'>
-              <p className='text-gray-600 text-[18px] font-semibold'>Amanda A.</p>
+              <p className='text-gray-600 font-semibold'>Amanda A.</p>
               <p className='text-sm text-gray-400'>Tue,12 Sep 2024 at 11:31pm</p>
             </div>
           </div>
@@ -48,7 +48,7 @@ const Reviews = () => {
               <span className='text-2xl text-gray-400'>A</span>
             </div>
             <div className='flex flex-col gap-1 justify-center'>
-              <p className='text-gray-600 text-[18px] font-semibold'>Gloria J.</p>
+              <p className='text-gray-600 font-semibold'>Gloria J.</p>
               <p className='text-sm text-gray-400'>Tue,12 Sep 2024 at 11:31pm</p>
             </div>
           </div>
