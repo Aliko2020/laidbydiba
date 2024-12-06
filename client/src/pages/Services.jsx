@@ -3,9 +3,8 @@ import React from 'react';
 const Services = () => {
   return (
     <div className='flex flex-col gap-2 mt-4 w-full p-4'>
-        <div className='flex justify-center items-center w-32 rounded-2xl p-2 mb-4 bg-Primary text-white'>
-            <h1 className='text-2xl font-bold'>Services</h1>
-        </div>
+        <h1 className='text-lg font-bold'>Services</h1>
+        <div className='w-20 p-0.5 bg-black mb-4'></div>
         <div className='w-full flex flex-wrap gap-4 md:gap-10 text-gray-700 text-[17px]'>
                
                     <div className='flex flex-col gap-1 border p-2 w-full lg:max-w-lg rounded-md'>

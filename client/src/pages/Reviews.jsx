@@ -13,14 +13,15 @@ const Reviews = () => {
 
   return (
     <div className='flex flex-col px-4'>
-        <div className='flex justify-center items-center w-32 rounded-2xl p-2 mb-8 bg-Primary text-white'>
-            <h1 className='text-2xl font-bold'>Reviews</h1>
-        </div>
+        
+            <h1 className='text-lg font-bold'>Reviews</h1>
+            <div className='w-16 p-0.5 bg-black mb-4'></div>
+        
         <div className='flex flex-col md:flex-row gap-4 '>
       <div className='flex flex-col text-[17px] max-w-lg'>
         <div className='flex flex-col gap-2'>
           <div className='flex gap-2'>
-            <div className='flex justify-center items-center w-20 h-20 bg-gray-100 rounded-full'>
+            <div className='flex justify-center items-center w-16 h-16 bg-gray-100 rounded-full'>
               <span className='text-2xl text-gray-400'>A</span>
             </div>
             <div className='flex flex-col gap-1 justify-center'>
@@ -43,7 +44,7 @@ const Reviews = () => {
       <div className='flex flex-col text-[17px] max-w-lg'>
         <div className='flex flex-col gap-2'>
           <div className='flex gap-2'>
-            <div className='flex justify-center items-center w-20 h-20 bg-gray-100 rounded-full'>
+            <div className='flex justify-center items-center w-16 h-16 bg-gray-100 rounded-full'>
               <span className='text-2xl text-gray-400'>A</span>
             </div>
             <div className='flex flex-col gap-1 justify-center'>
