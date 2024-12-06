@@ -15,7 +15,7 @@ const Reviews = () => {
     <div className='flex flex-col px-4'>
         
             <h1 className='text-lg font-bold'>Reviews</h1>
-            <div className='w-16 p-0.5 bg-black mb-4'></div>
+            <div className='w-16 p-0.5 bg-[#eea239] mb-4'></div>
         
         <div className='flex flex-col md:flex-row gap-4 '>
       <div className='flex flex-col text-[17px] max-w-lg'>
