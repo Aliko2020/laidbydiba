@@ -14,11 +14,11 @@ const Hero = () => {
     <div className="flex flex-col w-full items-center justify-center min-h-[85vh] text-center p-4 bg-gradient-to-b from-pink-100 via-pink-100 to-white">
       <div className="w-full max-h-[40vh] overflow-hidden mb-0"> {/* Reduced bottom margin */}
         <Flickity
-          className={'carousel'} // default ''
-          elementType={'div'} // default 'div'
-          options={flickityOptions} // takes flickity options {}
-          disableImagesLoaded={false} // default false
-          reloadOnUpdate // default false
+          className={'carousel'} 
+          elementType={'div'}
+          options={flickityOptions} 
+          disableImagesLoaded={false} 
+          reloadOnUpdate 
           static // default false
         >
           <img
@@ -49,7 +49,7 @@ const Hero = () => {
       </p>
       <div className='flex gap-4'> {/* Removed margin */}
         <Link to="/slots" className="bg-Complemetary text-white px-4 py-2 rounded-lg">Book Now</Link>
-        <Link to="/services" className="bg-Secondary bg-[#eea239] text-white px-4 py-2 rounded-lg">Our Services</Link>
+        <Link to="/services" className="bg-Secondary bg-[#eea239] text-white px-4 py-2 rounded-lg">Get Direction</Link>
       </div>
     </div>
   );

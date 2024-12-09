@@ -1,36 +1,46 @@
 import React from 'react';
 
+const services = [
+  {
+    title: "Glue-less Wigs (Frontal & Closure)",
+    price: "from GH₵50",
+    discount: "🎄20% discount this Christmas"
+  },
+  {
+    title: "Bridal Hairstyling",
+    price: "from GH₵150",
+    discount: "🎄20% discount this Christmas"
+  },
+  {
+    title: "Revamping Services",
+    price: "from GH₵50",
+    discount: "🎄20% discount this Christmas"
+  },
+  {
+    title: "Wig Styling for Occasion & Shoots",
+    price: "from GH₵50",
+    discount: "🎄20% discount this Christmas"
+  },
+  {
+    title: "Hair Colouring",
+    price: "from GH₵50",
+    discount: "🎄20% discount this Christmas"
+  }
+];
+
 const Services = () => {
   return (
-    <div className='flex flex-col gap-2 mt-0 w-full p-4'> 
-      <div className='flex flex-col justify-center items-center'>
-      <h1 className='text-lg font-bold text-gray-800'>Services</h1>
-      <div className='w-20 p-0.5 bg-[#eea239] mb-4'></div>
-      </div>
-      <div className='w-full flex flex-wrap gap-4 md:gap-10 text-gray-800 text-[17px]'>
-        <div className='flex flex-col gap-1 border p-2 w-full lg:max-w-lg rounded-md'>
-          <h3>Glue-less wigs (frontal & closure)</h3>
-          <p>from GH₵50</p> <span className='text-green-600'>🎄20% <span className='text-gray-800'>discount this Christmas</span></span>
-        </div>
-        <div className='flex flex-col gap-1 border p-2 w-full lg:max-w-lg rounded-md'>
-          <h3>Bridal Hairstyling</h3>
-          <p>from GH₵150</p> <span className='text-green-600'>🎄20% <span className='text-gray-800'>discount this Christmas</span></span>
-        </div>
-        <div className='flex flex-col gap-1 border p-2 w-full lg:max-w-lg rounded-md'>
-          <h3>Revamping services</h3>
-          <p>from GH₵50</p> <span className='text-green-600'>🎄20% <span className='text-gray-800'>discount this Christmas</span></span>
-        </div>
-        <div className='flex flex-col gap-1 border p-2 w-full lg:max-w-lg rounded-md'>
-          <h3>Wig styling for Occasion & shoots</h3>
-          <p>from GH₵50</p> <span className='text-green-600'>🎄20% <span className='text-gray-800'>discount this Christmas</span></span>
-        </div>
-        <div className='flex flex-col gap-1 border p-2 w-full lg:max-w-lg rounded-md'>
-          <h3>Hair colouring</h3>
-          <p>from GH₵50</p> <span className='text-green-600'>🎄20% <span className='text-gray-800'>discount this Christmas</span></span>
-        </div>
-      </div>
-      <div className='w-full md:w-3/10 p-2'>
-        {/* Additional content for the second div can go here */}
+    <div className='container mx-auto p-4 bg-gradient-to-b from-white via-pink-100 to-pink-100'>
+      <h1 className='text-2xl md:text-4xl font-bold text-gray-800 mb-4 text-center'>Our Services</h1>
+      <div className='w-20 h-1 bg-[#eea239] mx-auto mb-6'></div>
+      <div className='flex flex-wrap gap-4 md:gap-8 justify-center'>
+        {services.map((service, index) => (
+          <div key={index} className='service-card p-4 text-center rounded-lg border-b border-yellow-400 shadow-sm w-full sm:w-1/2 lg:w-1/3'>
+            <h3 className='font-semibold'>{service.title}</h3>
+            <p className='text-gray-600'>{service.price}</p>
+            {/* <span className='text-green-600'>{service.discount}</span> */}
+          </div>
+        ))}
       </div>
     </div>
   );
