@@ -1,10 +1,10 @@
 import React from 'react';
-// import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-6">
-      {/* <div className="container mx-auto flex flex-col items-center">
+    <footer className="bg-pink-200 text-white py-6">
+      <div className="container mx-auto flex flex-col items-center">
         <div className="flex gap-4 mb-4">
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400">
             <FaFacebookF />
@@ -20,7 +20,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="text-sm">&copy; {new Date().getFullYear()} Laidbydiba. All Rights Reserved.</p>
-      </div> */}
+      </div>
     </footer>
   );
 };

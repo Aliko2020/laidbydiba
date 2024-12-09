@@ -13,8 +13,8 @@ const Navbar = () => {
         <li className={`pb-2 ${getNavLinkClass('/')}`}>
           <Link to="/">Home</Link>
         </li>
-        <li className={`pb-2 ${getNavLinkClass('/services')}`}>
-          <Link to="/services">Services</Link>
+        <li className={`pb-2 ${getNavLinkClass('/contact')}`}>
+          <Link to="/contact">Contact</Link>
         </li>
         <li className={`pb-2 ${getNavLinkClass('/slots')}`}>
           <Link to="/slots">Book</Link>

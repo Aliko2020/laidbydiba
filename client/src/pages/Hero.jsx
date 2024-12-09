@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Flickity from 'react-flickity-component';
+import hair from '../assets/hair.jpg'
 
 const flickityOptions = {
   initialIndex: 0,
@@ -21,6 +22,11 @@ const Hero = () => {
           reloadOnUpdate 
           static // default false
         >
+          <img
+            src={hair}
+            alt="Image 1"
+            className="object-cover w-full max-h-[40vh] md:max-h-full md:h-auto"
+          />
           <img
             src="https://images.unsplash.com/photo-1517840933437-c41356892b35?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Image 1"
@@ -49,7 +55,7 @@ const Hero = () => {
       </p>
       <div className='flex gap-4'> {/* Removed margin */}
         <Link to="/slots" className="bg-Complemetary text-white px-4 py-2 rounded-lg">Book Now</Link>
-        <Link to="/services" className="bg-Secondary bg-[#eea239] text-white px-4 py-2 rounded-lg">Get Direction</Link>
+        <Link to="/services" className="bg-Secondary bg-[#eea239] text-white px-4 py-2 rounded-lg">Training</Link>
       </div>
     </div>
   );

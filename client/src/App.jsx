@@ -6,6 +6,9 @@ import UserForm from './components/UserForm';
 import Payment from './pages/Payment';
 import Confirmation from './pages/Comfirmation';
 import Home from './pages/Home';
+import ContactForm from './pages/Contact';
+
+
 
 const App = () => {
   const [bookingDetails, setBookingDetails] = useState(null);
@@ -27,6 +30,7 @@ const App = () => {
           <Route path='/slots' element={<SlotList onBook={handleBookSlot} />} />
           <Route path='/user-info' element={<UserForm onSubmit={handleUserFormSubmit} />} />
           <Route path='/payment' element={<Payment userInfo={userDetails} slotInfo={bookingDetails} />} />
+          <Route path='/contact' element={<ContactForm />} />
           <Route path='/confirmation' element={<Confirmation />} />
         </Route>
       </Routes>
