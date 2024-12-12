@@ -50,8 +50,8 @@ const Hero = () => {
         Your go-to destination for stylish and professional hair services. Book your appointment today!
       </p>
       <div className='flex gap-4'> {/* Removed margin */}
-        <Link to="/slots" className="bg-Complemetary text-white px-4 py-2 rounded-lg">Book Now</Link>
-        <Link to="/services" className="bg-Secondary bg-[#eea239] text-white px-4 py-2 rounded-lg">Training</Link>
+        <Link to="/slots" className="bg-black text-white font-semibold px-4 py-2 rounded-lg">Book Now</Link>
+        <Link to="/services" className="bg-pink-400 font-semibold text-white px-4 py-2 rounded-lg">Training</Link>
       </div>
     </div>
   );

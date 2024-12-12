@@ -25,7 +25,7 @@ const ContactForm = () => {
 
       </div>
       <div className="container mx-auto p-4">
-        <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4 text-center sm:mt-10">Contact Us</h1>
+        <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-2 text-center sm:mt-10">Contact Us</h1>
         <div className='relative w-20 h-1 bg-pink-100 mx-auto mb-6'></div>
         <p className="text-gray-700 text-center mb-2">
           Leave us a message, and we will get back to you.
@@ -110,7 +110,7 @@ const ContactForm = () => {
           <div className="flex items-center justify-between mb-4">
             <button
               type="submit"
-              className="bg-pink-400  hover:bg-pink-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-black  hover:bg-pink-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
               Send Message
             </button>

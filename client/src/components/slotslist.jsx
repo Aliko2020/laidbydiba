@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import logo from '../assets/logo.jpeg';
 
 const SlotList = ({ onBook }) => {
   const [slots, setSlots] = useState([]);
@@ -61,54 +62,59 @@ const SlotList = ({ onBook }) => {
   });
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold text-center mb-6">Available Slots</h1>
-      <div className="mb-4">
-        <select
-          className="border rounded bg-Complemetary text-Primary w-full py-3 px-3 focus:outline-none"
-          value={selectedService}
-          onChange={(e) => setSelectedService(e.target.value)}
-        >
-          <option value="">Choose a service</option>
-          <option value="Glue-less wigs">Glue-less wigs</option>
-          <option value="Bridal Hairstyling">Bridal Hairstyling</option>
-          <option value="Revamping services">Revamping services</option>
-          <option value="Hair colouring">Hair colouring</option>
-          <option value="Wig styling for Occasion & shoots">Wig styling for Occasion & shoots</option>
-        </select>
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <div className="hidden md:block max-w-40">
+        <img src={logo} alt="Logo" className="" />
       </div>
-      {loading ? (
-        <div className="flex justify-center items-center h-64">
-          <p>Loading available slots.This might take a couple seconds...</p>
+      <div className="flex flex-col w-full md:w-3/4 p-6 max-w-2xl">
+        <h1 className="text-2xl font-bold text-center mb-6">Available Slots</h1>
+        <div className="mb-4">
+          <select
+            className="border rounded bg-black text-Primary w-full py-3 px-3 focus:outline-none"
+            value={selectedService}
+            onChange={(e) => setSelectedService(e.target.value)}
+          >
+            <option value="">Choose a service</option>
+            <option value="Glue-less wigs">Glue-less wigs</option>
+            <option value="Bridal Hairstyling">Bridal Hairstyling</option>
+            <option value="Revamping services">Revamping services</option>
+            <option value="Hair colouring">Hair colouring</option>
+            <option value="Wig styling for Occasion & shoots">Wig styling for Occasion & shoots</option>
+          </select>
         </div>
-      ) : (
-        <div className="grid grid-cols-1 gap-4">
-          {filteredSlots.map(slot => (
-            <div 
-              key={`${slot.date}-${slot.slot}`} 
-              className={`p-4 border rounded-md ${getBackgroundColor(slot.date)}`}
-            >
-              <p>Date: {slot.date}</p>
-              <p>Slot: {slot.slot} ({slot.time})</p>
-              {slot.service && <p>Service: {slot.service}</p>}
-              <button 
-                className={`mt-2 px-4 py-2 rounded-md ${slot.booked ? 'bg-red-500 text-white' : 'bg-Complemetary text-Primary'}`} 
-                onClick={() => bookSlot(slot.date, slot.slot)} 
-                disabled={slot.booked}
+        {loading ? (
+          <div className="flex justify-center items-center h-64">
+            <BarLoader />
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 gap-2">
+            {filteredSlots.map(slot => (
+              <div 
+                key={`${slot.date}-${slot.slot}`} 
+                className={`p-4 border rounded-md ${getBackgroundColor(slot.date)}`}
               >
-                {slot.booked ? 'Booked' : 'Book Slot'}
-              </button>
-            </div>
-          ))}
+                <p>Date: {slot.date}</p>
+                <p>Slot: {slot.slot} ({slot.time})</p>
+                {slot.service && <p>Service: {slot.service}</p>}
+                <button 
+                  className={`mt-2 px-4 py-1 rounded-md ${slot.booked ? 'bg-red-500 text-white' : 'bg-black text-Primary'}`} 
+                  onClick={() => bookSlot(slot.date, slot.slot)} 
+                  disabled={slot.booked}
+                >
+                  {slot.booked ? 'Booked' : 'Book Slot'}
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+        <div className='flex justify-end w-full'>
+          <button 
+            onClick={() => navigate(-1)} 
+            className="bg-black mt-4 text-white px-4 py-2 rounded shadow-lg"
+          >
+            Back
+          </button>
         </div>
-      )}
-      <div className='flex justify-end w-full'>
-        <button 
-          onClick={() => navigate(-1)} 
-          className="bg-Complemetary mt-4 text-white px-4 py-2 rounded shadow-lg"
-        >
-          Back
-        </button>
       </div>
     </div>
   );

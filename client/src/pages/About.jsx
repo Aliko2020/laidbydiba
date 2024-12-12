@@ -15,9 +15,9 @@ const About = () => {
         <div className='flex flex-col gap-4 justify-center max-w-lg'>
             <div className='flex flex-col justify-center items-center'>
                 <h1 className='text-2xl mb-2 md:text-4xl font-bold text-gray-800'>About Us</h1>
-                <div className='w-24 mb-2 h-1 bg-pink-100'></div>
+                <div className='w-24 h-1 bg-pink-100'></div>
             </div>
-            <p className='p-4'>
+            <p className=''>
               Welcome to Laidbydiba, your premier destination for exceptional beauty and hairstyling services. Located in the heart of Bolgatanga, our salon is dedicated to providing high-quality, personalized care to help you look and feel your best.
               {isExpanded && (
                 <span>
