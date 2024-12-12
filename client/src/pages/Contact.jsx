@@ -20,10 +20,13 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center bg-gradient-to-b from-pink-100 to-white">
+    <div className="flex items-center justify-center bg-gradient-to-b from-white to-pink-100">
+      <div className='max-w-md'>
+
+      </div>
       <div className="container mx-auto p-4">
         <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4 text-center sm:mt-10">Contact Us</h1>
-        <div className='relative w-20 h-1 bg-[#eea239] mx-auto mb-6'></div>
+        <div className='relative w-20 h-1 bg-pink-100 mx-auto mb-6'></div>
         <p className="text-gray-700 text-center mb-2">
           Leave us a message, and we will get back to you.
         </p>
@@ -42,7 +45,7 @@ const ContactForm = () => {
             <FaLinkedinIn />
           </a>
         </div>
-        <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-8 rounded-lg shadow-sm">
+        <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-2 rounded-lg shadow-sm">
           <div className="flex flex-wrap -mx-3 mb-4">
             <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
               <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
@@ -107,7 +110,7 @@ const ContactForm = () => {
           <div className="flex items-center justify-between mb-4">
             <button
               type="submit"
-              className="bg-[#eea239]  hover:bg-yellow-300 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-pink-400  hover:bg-pink-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
               Send Message
             </button>

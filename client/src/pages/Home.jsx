@@ -3,6 +3,8 @@ import Hero from './Hero';
 import Services from './Services';
 import Reviews from './Reviews';
 import ContactForm from './Contact';
+import About from './About';
+
 
 
 const Home = () => {
@@ -10,6 +12,7 @@ const Home = () => {
     <div className='flex flex-col w-full'>
       <Hero />
       <Services />
+      <About />
       {/* <Reviews /> */}
       <ContactForm />
     </div>

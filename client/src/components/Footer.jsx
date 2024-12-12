@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/f
 
 const Footer = () => {
   return (
-    <footer className="bg-pink-200 text-white py-6">
+    <footer className="bg-gray-600 text-white py-6">
       <div className="container mx-auto flex flex-col items-center">
         <div className="flex gap-4 mb-4">
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400">
