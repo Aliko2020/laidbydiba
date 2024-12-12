@@ -13,7 +13,7 @@ const Hero = () => {
   
   return (
     <div className="flex flex-col w-full items-center justify-center min-h-[85vh] text-center p-4 bg-gradient-to-b from-pink-100 via-pink-100 to-white">
-      <div className="w-full max-h-[40vh] overflow-hidden mb-0"> {/* Reduced bottom margin */}
+      <div className="w-full max-h-[40vh] overflow-hidden mb-0 rounded-lg"> {/* Reduced bottom margin */}
         <Flickity
           className={'carousel'} 
           elementType={'div'}
@@ -50,8 +50,8 @@ const Hero = () => {
         Your go-to destination for stylish and professional hair services. Book your appointment today!
       </p>
       <div className='flex gap-4'> {/* Removed margin */}
-        <Link to="/slots" className="bg-black text-white font-semibold px-4 py-2 rounded-lg">Book Now</Link>
-        <Link to="/services" className="bg-pink-400 font-semibold text-white px-4 py-2 rounded-lg">Training</Link>
+        <Link to="/slots" className="bg-black text-white px-4 py-2 rounded-l-lg  font-semibold">Book Now</Link>
+        <Link to="/services" className="bg-Secondary bg-[#eea239] text-white px-4 py-2 rounded-r-lg font-semibold">Training</Link>
       </div>
     </div>
   );

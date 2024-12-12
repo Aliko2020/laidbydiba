@@ -24,7 +24,7 @@ const About = () => {
                   {" "}Our team of experienced professionals specializes in a range of services including glue-less wigs (frontal & closure), bridal hairstyling, revamping services, and more. We take pride in using the finest products and techniques to ensure you leave our salon feeling confident and beautiful.
                 </span>
               )}
-            <button onClick={handleReadMore} className='py-1 text-pink-400 font-semibold'>
+            <button onClick={handleReadMore} className='py-1 font-semibold'>
                 {isExpanded ? 'Read Less' : 'Read More'}
             </button>
             </p>

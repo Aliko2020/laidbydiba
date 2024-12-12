@@ -19,8 +19,8 @@ const UserForm = ({ onSubmit }) => {
 
   return (
     <div className="p-6 h-[100vh]">
-      <h2 className="text-2xl font-bold mb-1">Enter Contact Information</h2>
-      <p className='mb-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex consequatur exercitationem modi veniam nostrum</p>
+      <h2 className="text-2xl font-bold mt-4 mb-1">Enter Contact Information</h2>
+      <p className='mb-4'>Thank you for choosing our services! Please fill out the form below with your details. Proceed to payment, Once done Our team will contact you shortly to confirm your booking.</p>
       <Formik
         initialValues={{ name: '', email: '', phone: '' }}
         validationSchema={validationSchema}
@@ -62,12 +62,12 @@ const UserForm = ({ onSubmit }) => {
               <ErrorMessage name="phone" component="div" className="text-red-500 text-sm" />
             </div>
             <div className='flex justify-between mt-8'>
-            <button type="submit" className="bg-Complemetary text-Primary px-4  rounded" disabled={isSubmitting}>
+            <button type="submit" className="bg-green-600 text-white px-4  rounded" disabled={isSubmitting}>
               Proceed to Payment
             </button>
             <button 
               onClick={() => navigate(-1)} 
-              className="bg-Complemetary text-Primary px-4 py-2 rounded"
+              className="bg-black text-Primary px-4 py-2 rounded"
             >
               Back
             </button>

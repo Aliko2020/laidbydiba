@@ -20,13 +20,13 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center bg-gradient-to-b from-white to-pink-100">
+    <div className="flex items-center justify-center bg-pink-100">
       <div className='max-w-md'>
 
       </div>
       <div className="container mx-auto p-4">
         <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-2 text-center sm:mt-10">Contact Us</h1>
-        <div className='relative w-20 h-1 bg-pink-100 mx-auto mb-6'></div>
+        <div className='relative w-20 h-1 bg-[#eea239] mx-auto mb-6'></div>
         <p className="text-gray-700 text-center mb-2">
           Leave us a message, and we will get back to you.
         </p>

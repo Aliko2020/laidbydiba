@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
   const location = useLocation();
   const getNavLinkClass = (path) => (
-    location.pathname === path ? 'border-b-2 border-pink-400' : ''
+    location.pathname === path ? 'border-b-2 border-[#eea239]' : ''
   );
 
   return (
