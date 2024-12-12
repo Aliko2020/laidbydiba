@@ -11,7 +11,7 @@ const About = () => {
 
   return (
     <div className="relative flex flex-col sm:flex-row text-white sm:gap-4 justify-center sm:justify-around items-center sm:items-end p-4 bg-cover bg-center" style={{ backgroundImage: `url(${image1})`, opacity: 0.8 }}>
-      <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
+      <div className="absolute inset-0 bg-black opacity-20 z-0"></div>
       <div className="relative z-10">
         <img src={logo} alt="Logo" className="max-w-md p-4" />
       </div>

@@ -31,7 +31,7 @@ const services = [
 
 const Services = () => {
   return (
-    <div className='relative container mx-auto p-4 bg-pink-100 text-gray-800'>
+    <div className='relative container mx-auto p-4 mt-4 text-gray-800'>
       <div className='absolute inset-0 bg-cover bg-center opacity-10' style={{ backgroundImage: `url(${logo})` }}></div>
       <h1 className='relative text-2xl md:text-4xl font-bold mb-2 text-center'>Our Services</h1>
       <div className='relative w-20 h-1 bg-[#eea239] mx-auto mb-6'></div>

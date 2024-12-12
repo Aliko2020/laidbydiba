@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <div className='flex flex-col w-full'>
       <Hero />
-      <Services />
       <About />
+      <Services />
       {/* <Reviews /> */}
       <ContactForm />
     </div>
