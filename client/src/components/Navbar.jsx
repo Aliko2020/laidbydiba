@@ -8,7 +8,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="flex justify-center items-center shadow-lg font-semibold w-full p-4 bg-white sticky top-0 z-50">
+    <nav className="flex justify-center items-center shadow-lg font-semibold w-full p-4 bg-white text-[#F7879A] sticky top-0 z-50">
       <ul className="flex gap-4">
         <li className={`pb-2 ${getNavLinkClass('/')}`}>
           <Link to="/">Home</Link>

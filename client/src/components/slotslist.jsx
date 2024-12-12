@@ -38,11 +38,11 @@ const SlotList = ({ onBook }) => {
   const getBackgroundColor = (day) => {
     const colors = {
       Monday: 'bg-red-100',
-      Tuesday: 'bg-blue-100',
+      Tuesday: 'bg-[#F7879A]',
       Wednesday: 'bg-red-100',
-      Thursday: 'bg-blue-100',
+      Thursday: 'bg-[#F7879A]',
       Friday: 'bg-red-100',
-      Saturday: 'bg-blue-100',
+      Saturday: 'bg-[#F7879A]',
       Sunday: 'bg-red-100'
     };
     return colors[day] || 'bg-primary';
@@ -69,10 +69,10 @@ const SlotList = ({ onBook }) => {
         <img src={logo} alt="Logo" className="" />
       </div>
       <div className="flex flex-col w-full md:w-3/4 p-6 max-w-2xl">
-        <h1 className="text-2xl font-bold text-center mb-6">Available Slots</h1>
+        <h1 className="text-2xl font-bold text-[#F7879A] text-center mb-6">Available Slots</h1>
         <div className="mb-4">
           <select
-            className="border rounded bg-black text-Primary w-full py-3 px-3 focus:outline-none"
+            className="border rounded bg-[#F7879A] text-white w-full py-3 px-3 focus:outline-none"
             value={selectedService}
             onChange={(e) => setSelectedService(e.target.value)}
           >
@@ -99,7 +99,7 @@ const SlotList = ({ onBook }) => {
                 <p>Slot: {slot.slot} ({slot.time})</p>
                 {slot.service && <p>Service: {slot.service}</p>}
                 <button 
-                  className={`mt-2 px-4 py-1 rounded-md ${slot.booked ? 'bg-red-500 text-white' : 'bg-black text-Primary'}`} 
+                  className={`mt-2 px-4 py-1 rounded-md ${slot.booked ? 'bg-red-500 text-white' : 'bg-white text-black'}`} 
                   onClick={() => bookSlot(slot.date, slot.slot)} 
                   disabled={slot.booked}
                 >
@@ -112,7 +112,7 @@ const SlotList = ({ onBook }) => {
         <div className='flex justify-end w-full'>
           <button 
             onClick={() => navigate(-1)} 
-            className="bg-black mt-4 text-white px-4 py-2 rounded shadow-lg"
+            className="bg-[#F7879A] mt-4 text-white px-4 py-2 rounded shadow-lg"
           >
             Back
           </button>

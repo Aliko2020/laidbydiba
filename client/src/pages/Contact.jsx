@@ -20,35 +20,35 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center bg-[#F7879A] text-white">
       <div className='max-w-md'>
 
       </div>
       <div className="container mx-auto p-4">
-        <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-2 text-center sm:mt-10">Contact Us</h1>
-        <div className='relative w-20 h-1 bg-[#eea239] mx-auto mb-6'></div>
-        <p className="text-gray-700 text-center mb-2">
+        <h1 className="text-2xl md:text-4xl font-bold mb-2 text-center sm:mt-10">Contact Us</h1>
+        <div className='relative w-20 h-1 bg-white mx-auto mb-6'></div>
+        <p className="text-center mb-2">
           Leave us a message, and we will get back to you.
         </p>
         <div className="flex justify-center items-center space-x-4 mb-4">
           <span className="ml-2">Follow us on</span>
-          <a href="https://www.instagram.com/laidbydiba?igsh=bXQ3ZXp2cjFsc2w2" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">
+          <a href="https://www.instagram.com/laidbydiba?igsh=bXQ3ZXp2cjFsc2w2" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-700">
             <FaFacebookF />
           </a>
-          <a href="https://www.instagram.com/laidbydiba?igsh=bXQ3ZXp2cjFsc2w2" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">
+          <a href="https://www.instagram.com/laidbydiba?igsh=bXQ3ZXp2cjFsc2w2" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-700">
             <FaTwitter />
           </a>
-          <a href="https://www.instagram.com/laidbydiba?igsh=bXQ3ZXp2cjFsc2w2" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">
+          <a href="https://www.instagram.com/laidbydiba?igsh=bXQ3ZXp2cjFsc2w2" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-700">
             <FaInstagram />
           </a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-700">
             <FaLinkedinIn />
           </a>
         </div>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-2 rounded-lg shadow-sm">
           <div className="flex flex-wrap -mx-3 mb-4">
             <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+              <label className="block font-bold mb-2" htmlFor="name">
                 Name
               </label>
               <input
@@ -62,7 +62,7 @@ const ContactForm = () => {
               />
             </div>
             <div className="w-full md:w-1/2 px-3">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+              <label className="block font-bold mb-2" htmlFor="email">
                 Email
               </label>
               <input
@@ -77,7 +77,7 @@ const ContactForm = () => {
             </div>
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
+            <label className="block font-bold mb-2" htmlFor="phone">
               Phone Number
             </label>
             <div className='flex justify-center items-center gap-1'>
@@ -95,7 +95,7 @@ const ContactForm = () => {
             </div>
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
+            <label className="block font-bold mb-2" htmlFor="message">
               Message
             </label>
             <textarea
@@ -110,7 +110,7 @@ const ContactForm = () => {
           <div className="flex items-center justify-between mb-4">
             <button
               type="submit"
-              className="bg-black  hover:bg-pink-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-white text-gray-500 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
               Send Message
             </button>
