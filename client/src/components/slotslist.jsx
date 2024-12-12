@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.jpeg';
+import { BarLoader} from 'react-spinners'
+
 
 const SlotList = ({ onBook }) => {
   const [slots, setSlots] = useState([]);
@@ -63,7 +65,7 @@ const SlotList = ({ onBook }) => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <div className="hidden md:block max-w-40">
+      <div className="max-w-40">
         <img src={logo} alt="Logo" className="" />
       </div>
       <div className="flex flex-col w-full md:w-3/4 p-6 max-w-2xl">
