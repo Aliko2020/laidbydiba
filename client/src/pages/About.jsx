@@ -10,7 +10,7 @@ const About = () => {
   };
 
   return (
-    <div className='flex flex-col sm:flex-row sm:gap-4 bg-[#F7879A] text-white justify-center sm:justify-around items-center sm:items-end p-4'>
+    <div className='flex flex-col sm:flex-row sm:gap-4 bg-[#F7879A] text-white justify-center rounded-t-lg sm:justify-around items-center sm:items-end p-4'>
         <img src={logo} alt="Logo" className='max-w-md px-8'/>
         <div className='flex flex-col gap-4 justify-center max-w-lg sm:mb-4'>
             <div className='flex flex-col'>
