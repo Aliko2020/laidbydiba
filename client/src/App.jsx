@@ -7,6 +7,8 @@ import Payment from './pages/Payment';
 import Confirmation from './pages/Comfirmation';
 import Home from './pages/Home';
 import ContactForm from './pages/Contact';
+import Training from './pages/Training';
+
 
 
 
@@ -32,6 +34,7 @@ const App = () => {
           <Route path='/payment' element={<Payment userInfo={userDetails} slotInfo={bookingDetails} />} />
           <Route path='/contact' element={<ContactForm />} />
           <Route path='/confirmation' element={<Confirmation />} />
+          <Route path='/training' element={<Training />} />
         </Route>
       </Routes>
     </BrowserRouter>

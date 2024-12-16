@@ -12,7 +12,7 @@ const flickityOptions = {
 const Hero = () => {
   
   return (
-    <div className="flex flex-col w-full items-center justify-center min-h-[90vh] text-center p-4 bg-gradient-to-b from-[#ec99a7] via-pink-100 to-white">
+    <div className="flex flex-col w-full items-center justify-center min-h-[90vh] text-center p-4">
       <div className="w-full max-h-[40vh] overflow-hidden mb-0 rounded-lg"> {/* Reduced bottom margin */}
         <Flickity
           className={'carousel'} 
@@ -45,13 +45,13 @@ const Hero = () => {
           />
         </Flickity>
       </div>
-      <h1 className="text-5xl font-bold text-[#F7879A] mb-4 font-test mt-4">Welcome To Laidbydiba</h1>
-      <p className="text-lg text-gray-900 mb-2"> {/* Reduced bottom margin */}
+      <h1 className="text-5xl font-bold mb-4 font-test mt-4">Welcome To Laidbydiba</h1>
+      <p className="text-lg mb-2"> {/* Reduced bottom margin */}
         Your go-to destination for stylish and professional hair services. Book your appointment today!
       </p>
       <div className='flex gap-4'> {/* Removed margin */}
-        <Link to="/slots" className="bg-[#F7879A] text-white px-4 py-2 rounded-l-lg  font-semibold">Book Now</Link>
-        <Link to="/services" className="bg-Secondary bg-[#eea239] text-white px-4 py-2 rounded-r-lg font-semibold">Training</Link>
+        <Link to="/slots" className="bg-pink-700 text-white px-4 py-2 rounded-l-lg  font-semibold">Book Now</Link>
+        <Link to="/training" className="bg-Secondary bg-[#eea239] text-white px-4 py-2 rounded-r-lg font-semibold">Training</Link>
       </div>
     </div>
   );
