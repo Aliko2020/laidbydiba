@@ -4,6 +4,7 @@ import Services from './Services';
 import Reviews from './Reviews';
 import ContactForm from './Contact';
 import About from './About';
+import Training from './Training';
 
 
 
@@ -13,7 +14,7 @@ const Home = () => {
       <Hero />
       <About />
       <Services />
-      
+      <Training />
       {/* <Reviews /> */}
       <ContactForm />
     </div>

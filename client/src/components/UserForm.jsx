@@ -15,67 +15,77 @@ const UserForm = ({ onSubmit }) => {
       .required('Email is required'),
     phone: Yup.string()
       .required('Phone number is required'),
+    terms: Yup.boolean()
+      .oneOf([true], 'Please accept the terms and condition to continue')
+      .required('Please accept the terms and condition to continue'),
   });
 
   return (
-    <div className="p-6 h-[100vh]">
-      <h2 className="text-2xl font-bold mt-4 mb-1">Enter Contact Information</h2>
-      <p className='mb-4'>Thank you for choosing our services! Please fill out the form below with your details. Proceed to payment, Once done Our team will contact you shortly to confirm your booking.</p>
-      <Formik
-        initialValues={{ name: '', email: '', phone: '' }}
-        validationSchema={validationSchema}
-        onSubmit={(values) => {
-          onSubmit(values);
-          navigate('/payment');
-        }}
-      >
-        {({ isSubmitting }) => (
-          <Form>
-            <div className="mb-4">
-              <label className="block mb-2 font-medium text-gray-700">Name*</label>
-              <Field
-                type="text"
-                name="name"
-                className="border border-Complemetary rounded w-full py-2 px-3 text-gray-700 focus:outline-none"
-              />
-              <ErrorMessage name="name" component="div" className="text-red-500 text-sm" />
-            </div>
-            <div className="mb-4">
-              <label className="block mb-2 font-medium text-gray-700">Email (optional)</label>
-              <Field
-                type="email"
-                name="email"
-                className="border border-Complemetary rounded w-full py-2 px-3 text-gray-700 focus:outline-none"
-              />
-              <ErrorMessage name="email" component="div" className="text-red-500 text-sm" />
-            </div>
-            <div className="mb-4">
-              <label className="block mb-2 font-medium text-gray-700">Phone*</label>
-              <div className='flex gap-2 items-center'>
-                <label className='border border-Complemetary p-2 rounded' htmlFor="">+233</label>
+    <div className="flex items-center justify-center">
+      <div className="max-w-lg w-full bg-white p-6 rounded">
+        <h2 className="text-2xl md:text-4xl text-center font-bold my-4">Enter Contact Information</h2>
+        <p className="mb-4 text-center">
+          Thank you for choosing our services! Please fill out the form below with your details. Proceed to payment. Once done, our team will contact you shortly to confirm your booking.
+        </p>
+        <Formik
+          initialValues={{ name: '', email: '', phone: '', terms: false }}
+          validationSchema={validationSchema}
+          onSubmit={(values) => {
+            onSubmit(values);
+            navigate('/payment');
+          }}
+        >
+          {({ isSubmitting }) => (
+            <Form>
+              <div className="mb-4">
+                <label className="block mb-2 font-bold">Name*</label>
                 <Field
-                type="text"
-                name="phone"
-                className="border border-Complemetary rounded w-full py-2 px-3 text-gray-700 focus:outline-none"
-              />
+                  type="text"
+                  name="name"
+                  className="border rounded w-full py-2 px-3 focus:outline-none"
+                />
+                <ErrorMessage name="name" component="div" className="text-red-500 text-sm" />
               </div>
-              <ErrorMessage name="phone" component="div" className="text-red-500 text-sm" />
-            </div>
-            <div className='flex justify-between mt-8'>
-            <button type="submit" className="bg-green-600 text-white px-4  rounded" disabled={isSubmitting}>
-              Proceed to Payment
-            </button>
-            <button 
-              onClick={() => navigate(-1)} 
-              className="bg-black text-Primary px-4 py-2 rounded"
-            >
-              Back
-            </button>
-            </div>
-          </Form>
-        )}
-      </Formik>
-      
+              <div className="mb-4">
+                <label className="block mb-2 font-bold">Email (optional)</label>
+                <Field
+                  type="email"
+                  name="email"
+                  className="border rounded w-full py-2 px-3 focus:outline-none"
+                />
+                <ErrorMessage name="email" component="div" className="text-red-500 text-sm" />
+              </div>
+              <div className="mb-4">
+                <label className="block mb-2 font-bold">Phone*</label>
+                <div className="flex gap-2 items-center">
+                  <label className="border p-2 rounded">+233</label>
+                  <Field
+                    type="text"
+                    name="phone"
+                    className="border rounded w-full py-2 px-3 focus:outline-none"
+                  />
+                </div>
+                <ErrorMessage name="phone" component="div" className="text-red-500 text-sm" />
+              </div>
+              <div className="my-8">
+                <label className="block mb-2 font-bold">
+                  <Field type="checkbox" name="terms" className="mr-2" />
+                  You will be charged a fee of GHC 20*
+                </label>
+                <ErrorMessage name="terms" component="div" className="text-red-500 text-sm" />
+              </div>
+              <div className="flex justify-between mt-8">
+                <button type="submit" className="bg-green-600 text-white px-4 py-2 rounded" disabled={isSubmitting}>
+                  Proceed to Payment
+                </button>
+                <button onClick={() => navigate(-1)} className="bg-gray-300 text-white px-4 py-2 rounded">
+                  Back
+                </button>
+              </div>
+            </Form>
+          )}
+        </Formik>
+      </div>
     </div>
   );
 };
