@@ -28,7 +28,7 @@ const Training = () => {
               )}
             </p>
             <div className='flex'>
-            <button onClick={handleJoinNow} className='py-2 bg-white px-8 rounded-lg mb-2 text-pink-700 font-semibold'>
+            <button onClick={handleJoinNow} className='font-bold py-2 px-4 rounded bg-white mb-2 text-pink-700'>
                 Join Now
             </button>
             </div>
