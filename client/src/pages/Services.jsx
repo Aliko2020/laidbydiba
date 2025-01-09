@@ -32,12 +32,12 @@ const services = [
 const Services = () => {
   return (
     <div className='relative container mt-4 mx-auto p-4 bg-white'>
-      <div className='absolute inset-0 bg-cover bg-center opacity-10' style={{ backgroundImage: `url(${logo})` }}></div>
+      <div className=''></div>
       <h1 className='relative text-2xl md:text-4xl font-bold mb-2 text-center'>Our Services</h1>
-      <div className='relative w-20 h-1 bg-pink-800 mx-auto mb-6'></div>
+      <div className='relative w-20 h-0.5 bg-[#4F646F] mx-auto mb-6'></div>
       <div className='relative flex flex-wrap gap-4 md:gap-8 justify-center'>
         {services.map((service, index) => (
-          <div key={index} className='service-card p-4 text-center rounded-lg border-b border-pink-800 shadow-sm w-full sm:w-1/2 lg:w-1/3'>
+          <div key={index} className='service-card p-4 text-center rounded-lg border-b border-[#4F646F] shadow-sm w-full sm:w-1/2 lg:w-1/3'>
             <h3 className='text-lg font-semibold'>{service.title}</h3>
             {/* <p className='text-gray-600'>{service.price}</p> */}
             {/* <span className='text-green-600'>{service.discount}</span> */}

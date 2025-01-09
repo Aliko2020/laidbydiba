@@ -22,8 +22,8 @@ const UserForm = ({ onSubmit }) => {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="max-w-lg w-full bg-white p-6 rounded">
-        <h2 className="text-2xl md:text-4xl text-center font-bold my-4">Enter Contact Information</h2>
+      <div className="max-w-xl w-full mt-4">
+        <h2 className="text-2xl md:text-4xl text-center font-bold my-4">Contact Information</h2>
         <p className="mb-4 text-center">
           Thank you for choosing our services! Please fill out the form below with your details. Proceed to payment. Once done, our team will contact you shortly to confirm your booking.
         </p>
@@ -75,10 +75,10 @@ const UserForm = ({ onSubmit }) => {
                 <ErrorMessage name="terms" component="div" className="text-red-500 text-sm" />
               </div>
               <div className="flex justify-between mt-8">
-                <button type="submit" className="bg-green-600 text-white px-4 py-2 rounded" disabled={isSubmitting}>
+                <button type="submit" className="btn btn-secondary" disabled={isSubmitting}>
                   Proceed to Payment
                 </button>
-                <button onClick={() => navigate(-1)} className="bg-gray-300 text-white px-4 py-2 rounded">
+                <button onClick={() => navigate(-1)} className="btn btn-secondary">
                   Back
                 </button>
               </div>

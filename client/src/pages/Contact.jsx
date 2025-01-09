@@ -26,7 +26,6 @@ const ContactForm = () => {
       </div>
       <div className="container mx-auto p-4">
         <h1 className="text-2xl md:text-4xl font-bold mb-2 text-center sm:mt-10">Contact Us</h1>
-        <div className='relative w-20 h-1 bg-pink-800 mx-auto mb-6'></div>
         <p className="text-center mb-2 font">
           Leave us a message, and we will get back to you.
         </p>
@@ -110,7 +109,7 @@ const ContactForm = () => {
           <div className="flex items-center justify-between mb-4">
             <button
               type="submit"
-              className="bg-pink-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="btn btn-secondary"
             >
               Send Message
             </button>
