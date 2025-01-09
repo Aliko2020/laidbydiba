@@ -11,13 +11,12 @@ const Training = () => {
   };
 
   return (
-    <div className='flex flex-col sm:flex-row sm:gap-4 bg-pink-700 text-white justify-center rounded-br-3xl sm:justify-around items-center sm:items-end p-4'>
-        <div className='flex flex-col gap-4 justify-center max-w-lg sm:mb-4'>
+    <div className='flex flex-col sm:flex-row sm:gap-4 bg-[#679b9b] text-white justify-center sm:justify-around items-center sm:items-end p-4'>
+        <div className='flex flex-col gap-2 justify-center max-w-lg sm:mb-4'>
             <div className='flex flex-col relative'>
-                <h1 className='text-2xl mb-2 md:text-4xl font-bold mt-4'>
-                  Join Our Training Program!
+                <h1 className='text-2xl md:text-4xl font-bold mt-4'>
+                  Training
                 </h1>
-                <div className='w-32 h-1 bg-white'></div>
             </div>
             <p className=''>
             Unlock your potential with our expert-led courses in Wig Making, Makeup Artistry, and more! Whether you're a budding artist or looking to refine your skills, we've got the perfect program tailored just for you.
@@ -27,8 +26,8 @@ const Training = () => {
                 </span>
               )}
             </p>
-            <div className='flex'>
-            <button onClick={handleJoinNow} className='font-bold py-2 px-4 rounded bg-white mb-2 text-pink-700'>
+            <div className='flex'
+            <button onClick={handleJoinNow} className='btn btn-white'>
                 Join Now
             </button>
             </div>

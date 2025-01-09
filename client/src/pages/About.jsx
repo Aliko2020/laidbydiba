@@ -3,19 +3,18 @@ import logo from '../assets/logo2.png';
 
 
 const About = () => {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const handleReadMore = () => {
     setIsExpanded(!isExpanded);
   };
 
   return (
-    <div className='flex flex-col sm:flex-row sm:gap-4 bg-pink-700 text-white justify-center rounded-tl-3xl sm:justify-around items-center sm:items-end p-4'>
+    <div className='flex flex-col sm:flex-row sm:gap-4 bg-[#679b9b] text-white justify-center sm:justify-around items-center sm:items-end p-4'>
         <img src={logo} alt="Logo" className='max-w-md px-8'/>
-        <div className='flex flex-col gap-4 justify-center max-w-lg sm:mb-4'>
+        <div className='flex flex-col gap-2 justify-center max-w-lg sm:mb-4'>
             <div className='flex flex-col'>
-                <h1 className='text-2xl mb-2 md:text-4xl font-bold '>Who we are</h1>
-                <div className='w-32 h-1 bg-white'></div>
+                <h1 className='text-2xl md:text-4xl font-bold '>Who we are</h1>
             </div>
             <p className=''>
               We are Laidbydiba, your premier destination for exceptional beauty and hairstyling services. Located in the heart of Bolgatanga, our salon is dedicated to providing high-quality, personalized care to help you look and feel your best.

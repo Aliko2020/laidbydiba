@@ -3,4 +3,70 @@
 @tailwind utilities;
 
 
+.hero{
+    background: 
+    linear-gradient(90deg, rgba(99,115,115,1) 0%, rgba(99,115,115,0.38699229691876746) 99%),
+    url(./src/assets/back.png);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.btn{
+    font-weight: bold;
+    padding: 0.5rem 1rem; 
+    border-radius: 0.25rem; 
+    outline: none;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.1s, box-shadow 0.1s;
+    border: 1px solid white;
+}
+
+.btn-primary{
+    background-color: #fc9c74;
+    color: white;
+}
+.btn-secondary{
+    background-color: #647474;
+    color: white;
+}
+.btn-white{
+    background-color: white;
+    color: #637373;
+}
+.btn:hover{
+    transform: translateY(-3px)
+}
+.btn:active{
+    transform: translateY(-2px)
+}
+
+.hover{
+     
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+.hover:hover{
+    transform: translateY(-2px)
+}
+.hover:active{
+    transform: translateY(-1px)
+}
+.animation {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animation {
+    animation: fadeIn 1s ease-in-out;
+  }
   

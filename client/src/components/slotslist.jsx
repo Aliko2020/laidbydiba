@@ -72,7 +72,7 @@ const SlotList = ({ onBook }) => {
         <h1 className="text-2xl font-bold text-center mb-6">Available Slots</h1>
         <div className="mb-4">
           <select
-            className="border rounded w-full py-3 px-3 focus:outline-none"
+            className="border rounded bg-[#637373] text-white w-full py-3 px-3 focus:outline-none"
             value={selectedService}
             onChange={(e) => setSelectedService(e.target.value)}
           >
@@ -99,7 +99,7 @@ const SlotList = ({ onBook }) => {
                 <p>Slot: {slot.slot} ({slot.time})</p>
                 {slot.service && <p>Service: {slot.service}</p>}
                 <button 
-                  className={`mt-2 px-4 py-1 rounded-md ${slot.booked ? 'bg-red-500 text-white' : 'bg-white'}`} 
+                  className="btn btn-secondary" 
                   onClick={() => bookSlot(slot.date, slot.slot)} 
                   disabled={slot.booked}
                 >
@@ -112,8 +112,7 @@ const SlotList = ({ onBook }) => {
         <div className='flex justify-end w-full'>
           <button 
             onClick={() => navigate(-1)} 
-            className="bg-gray-300 mt-4 text-white px-4 py-2 rounded shadow-lg"
-          >
+            className="btn btn-secondary mt-4"      
             Back
           </button>
         </div>
