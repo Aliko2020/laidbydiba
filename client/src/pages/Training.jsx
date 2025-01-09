@@ -26,7 +26,7 @@ const Training = () => {
                 </span>
               )}
             </p>
-            <div className='flex'
+            <div className='flex'>
             <button onClick={handleJoinNow} className='btn btn-white'>
                 Join Now
             </button>
