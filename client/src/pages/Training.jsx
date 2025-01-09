@@ -27,7 +27,7 @@ const Training = () => {
               )}
             </p>
             <div className='flex'>
-            <button onClick={handleJoinNow} className='btn btn-secondary'>
+            <button onClick={handleJoinNow} className='btn btn-white'>
                 Join Now
             </button>
             </div>
