@@ -112,8 +112,7 @@ const SlotList = ({ onBook }) => {
         <div className='flex justify-end w-full'>
           <button 
             onClick={() => navigate(-1)} 
-            className="btn btn-secondary mt-4"
-          >
+            className="btn btn-secondary mt-4"      
             Back
           </button>
         </div>
