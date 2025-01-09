@@ -6,7 +6,7 @@
 .hero{
     background: 
     linear-gradient(90deg, rgba(99,115,115,1) 0%, rgba(99,115,115,0.38699229691876746) 99%),
-    url(./src/assets/back.png);
+    url('./public/images/back.png');
     background-position: center;
     background-size: cover;
 
@@ -42,7 +42,6 @@
 }
 
 .hover{
-     
     transition: transform 0.1s, box-shadow 0.1s;
 }
 .hover:hover{
